@@ -1,27 +1,78 @@
 jQuery(document).ready(function ($) {
+    // Add fixed height to container
+    $('main').css({
+        height: window.innerHeight,
+    });
+
+    // Change active section/page on button click
     $('section').on('click', 'button.btn', function () {
         var th = $(this);
         var ind = th.parent().index();
         $('header').fadeIn();
         $('.active-section').removeClass('active-section');
-        $('section').eq(ind).addClass('active-section');
-        $('nav li')
-            .eq(ind - 1)
-            .addClass('active-nav');
+
+        // Add active navigation
+        $('section')
+            .eq(ind + 1)
+            .addClass('active-section');
+        $('nav li').eq(ind).addClass('active-nav');
+
+        // Change paggination exp. 1/5
+        $('#pagination span:nth-child(1)').text(ind + 1);
+
+        // Auto focus input on active section
+        $('section')
+            .eq(ind + 1)
+            .find('.section-input')
+            .focus();
     });
 
+    // Add class for styling on input focus
+    $('.section-input').on('focusin', function (e) {
+        $('.active-section').addClass('focused');
+    });
+
+    $('.section-input').on('focusout', function (e) {
+        $('.active-section').removeClass('focused');
+    });
+
+    // Header circle step navigation
     $('nav').on('click', 'li.active-nav', function () {
-        var th = $(this);
-        var ind = th.index();
-        console.log('nav click' + ind);
+        var ind = $(this).index();
+        $('section').eq(ind).find('.btn').trigger('click');
     });
 
+    // Change metric system
     $('.measurements').on('click', 'span', function () {
-        $('.m-active').removeClass('m-active');
-        $(this).toggleClass('m-active');
+        if ($(this).hasClass('metric')) {
+            $('.active-section')
+                .removeClass('active-imperial')
+                .addClass('active-metric');
+            //$('.input-metric').focus();
+        } else {
+            $('.active-section')
+                .removeClass('active-metric')
+                .addClass('active-imperial');
+            //$('.height-input-inch').focus();
+        }
     });
 
-    $('main').css({
-        height: window.innerHeight,
+    // Blur input on pressing enter key
+    $(document).on('keypress', '.section-input', function (event) {
+        var keycode = event.keyCode || event.which;
+        if (keycode == '13') {
+            event.preventDefault();
+            var element = event.currentTarget;
+            element.blur();
+            // var id = $(element).attr('id');
+
+            // if (id == 'fullname') {
+            //     $(event.currentTarget).trigger('enter');
+            //     var text = $(event.currentTarget).val();
+            //     localStorage.setItem('memberprofileupdatetype', 'fullname');
+            //     localStorage.setItem('memberprofilenameupdate', text);
+            //     event.preventDefault();
+            // }
+        }
     });
 });

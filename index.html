@@ -25,117 +25,134 @@
                     </ul>
                 </nav>
             </header>
-
-            <section id="home" class="active-section">
-                <div class="wrapper">
-                    <h1>Change<br />starts<br />today.</h1>
-                    <h2>Get your personalized<br />nutrition plan now.</h2>
-                </div>
-                <button type="button" class="btn">Get started</button>
-            </section>
-
-            <section id="step-1">
-                <div class="wrapper">
-                    <h1>What is your<br />age?</h1>
-                    <input
-                        type="number"
-                        class="section-input"
-                        name="age"
-                        min="18"
-                        max="99"
-                        value="29"
-                    />
-                    <div class="input-description">
-                        <span>Years</span>
+            <form>
+                <section id="home" class="active-section">
+                    <div class="wrapper">
+                        <h1>Change<br />starts<br />today.</h1>
+                        <h2>Get your personalized<br />nutrition plan now.</h2>
                     </div>
-                </div>
+                    <button type="button" class="btn">Get started</button>
+                </section>
 
-                <button type="button" class="btn btn-white">Continue</button>
-            </section>
-
-            <section id="step-2">
-                <div class="wrapper">
-                    <h1>What is your height?</h1>
-                    <div class="measurements">
-                        <span class="metric m-active">metric</span>
-                        <span class="imperial">imperial</span>
-                    </div>
-                    <input
-                        type="number"
-                        class="section-input input-metric"
-                        name="height"
-                        min="140"
-                        max="220"
-                        value="150"
-                    />
-                    <div class="input-imperial">
+                <section id="step-1" class="active-metric focused">
+                    <div class="wrapper">
+                        <h1>What is your age?</h1>
                         <input
                             type="number"
                             class="section-input"
-                            name="height-ft"
+                            name="age"
                             min="18"
                             max="99"
-                            value="29"
                         />
+                        <div class="input-description">
+                            <span class="description-metric">Years</span>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-white">
+                        Continue
+                    </button>
+                </section>
+
+                <section id="step-2" class="focused active-metric">
+                    <div class="wrapper">
+                        <h1>What is your height?</h1>
+                        <div class="measurements">
+                            <span class="metric">metric</span>
+                            <span class="imperial">imperial</span>
+                        </div>
                         <input
                             type="number"
                             class="section-input input-metric"
-                            name="height-inch"
+                            name="height"
+                            min="140"
+                            max="220"
+                        />
+                        <div class="input-imperial">
+                            <input
+                                type="number"
+                                class="section-input"
+                                name="height-ft"
+                                min="18"
+                                max="99"
+                                value="3"
+                            />
+                            <input
+                                type="number"
+                                class="section-input height-input-inch"
+                                name="height-inch"
+                                min="18"
+                                max="99"
+                            />
+                        </div>
+                        <div class="input-description">
+                            <span class="description-metric">cm</span>
+                            <div class="description-imperial i-height">
+                                <span>ft</span>
+                                <span>inch</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-white">
+                        Continue
+                    </button>
+                </section>
+
+                <section id="step-3" class="focused active-metric">
+                    <div class="wrapper">
+                        <h1>What is your weight?</h1>
+                        <div class="measurements">
+                            <span class="metric">metric</span>
+                            <span class="imperial">imperial</span>
+                        </div>
+                        <input
+                            type="number"
+                            class="section-input"
+                            name="age"
                             min="18"
                             max="99"
-                            value="29"
                         />
+                        <div class="input-description">
+                            <span class="description-metric">kg</span>
+                            <span class="description-imperial">lb</span>
+                        </div>
                     </div>
-                    <div class="input-description">
-                        <span class="description-metric">CM</span>
+                    <button type="button" class="btn btn-white">
+                        Continue
+                    </button>
+                </section>
+
+                <section id="step-4" class="focused active-metric">
+                    <div class="wrapper">
+                        <h1>What is your target weight?</h1>
+                        <div class="measurements">
+                            <span class="metric">metric</span>
+                            <span class="imperial">imperial</span>
+                        </div>
+                        <input
+                            type="number"
+                            class="section-input"
+                            name="age"
+                            min="18"
+                            max="99"
+                        />
+                        <div class="input-description">
+                            <span class="description-metric">kg</span>
+                            <span class="description-imperial">lb</span>
+                        </div>
                     </div>
-                </div>
-                <button type="button" class="btn btn-white">Continue</button>
-            </section>
+                    <button type="button" class="btn btn-white">
+                        Continue
+                    </button>
+                </section>
 
-            <section id="step-3">
-                <div class="wrapper">
-                    <h1>What is your weight?</h1>
-                    <input
-                        type="number"
-                        class="section-input"
-                        name="age"
-                        min="18"
-                        max="99"
-                        value="29"
-                    />
-                    <div class="input-description">
-                        <span>Years</span>
+                <section id="step-5">
+                    <div class="wrapper">
+                        <h1>Select your favorite products?</h1>
                     </div>
-                </div>
-                <button type="button" class="btn btn-white">Continue</button>
-            </section>
-
-            <section id="step-4">
-                <div class="wrapper">
-                    <h1>What is your target weight?</h1>
-
-                    <input
-                        type="number"
-                        class="section-input"
-                        name="age"
-                        min="18"
-                        max="99"
-                        value="29"
-                    />
-                    <div class="input-description">
-                        <span>Years</span>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-white">Continue</button>
-            </section>
-
-            <section id="step-5">
-                <div class="wrapper">
-                    <h1>Select your favorite products?</h1>
-                </div>
-                <button type="button" class="btn">Continue</button>
-            </section>
+                    <button type="submit" class="btn">Continue</button>
+                </section>
+            </form>
         </main>
 
         <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>

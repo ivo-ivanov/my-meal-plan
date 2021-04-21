@@ -103,18 +103,24 @@ select {
 
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: $black;
-    opacity: 1; /* Firefox */
+    color: $white;
+    opacity: 0.2; /* Firefox */
 }
 
 :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    color: $black;
+    color: $white;
+    opacity: 0.2;
 }
 
 ::-ms-input-placeholder {
     /* Microsoft Edge */
-    color: $black;
+    color: $white;
+    opacity: 0.2;
+}
+
+input:focus::placeholder {
+    color: transparent;
 }
 
 input {
