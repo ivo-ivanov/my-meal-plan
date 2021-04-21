@@ -20,4 +20,8 @@ jQuery(document).ready(function ($) {
         $('.m-active').removeClass('m-active');
         $(this).toggleClass('m-active');
     });
+
+    $('main').css({
+        height: window.innerHeight,
+    });
 });
