@@ -75,4 +75,13 @@ jQuery(document).ready(function ($) {
             // }
         }
     });
+
+    // Slider with favorite products
+    if ($('.swiper-wrapper').length) {
+        var swiperHome = new Swiper('.swiper-container', {
+            slidesPerView: 4,
+            centeredSlides: true,
+            spaceBetween: 30,
+        });
+    }
 });
