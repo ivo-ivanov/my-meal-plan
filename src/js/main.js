@@ -64,15 +64,6 @@ jQuery(document).ready(function ($) {
             event.preventDefault();
             var element = event.currentTarget;
             element.blur();
-            // var id = $(element).attr('id');
-
-            // if (id == 'fullname') {
-            //     $(event.currentTarget).trigger('enter');
-            //     var text = $(event.currentTarget).val();
-            //     localStorage.setItem('memberprofileupdatetype', 'fullname');
-            //     localStorage.setItem('memberprofilenameupdate', text);
-            //     event.preventDefault();
-            // }
         }
     });
 
