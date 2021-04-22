@@ -5,7 +5,7 @@ jQuery(document).ready(function ($) {
     });
 
     // Change active section/page on button click
-    $('section').on('click', 'button.btn', function () {
+    $('section').on('click', 'button.btn:not(".submit")', function () {
         var th = $(this);
         var ind = th.parent().index();
         $('header').fadeIn();
@@ -79,9 +79,12 @@ jQuery(document).ready(function ($) {
     // Slider with favorite products
     if ($('.swiper-wrapper').length) {
         var swiperHome = new Swiper('.swiper-container', {
-            slidesPerView: 4,
-            centeredSlides: true,
-            spaceBetween: 30,
+            // Optional parameters
+            loop: true,
+        });
+
+        $('.slide-select').on('click', function () {
+            $(this).parent().toggleClass('selected-product');
         });
     }
 });

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="assets/css/style.css" />
+
         <title>My Meal Plan</title>
     </head>
     <body>
@@ -149,31 +150,75 @@
                 <section id="step-5">
                     <div class="wrapper">
                         <h1>Select your favorite products?</h1>
-                        <!-- Slider main container -->
+
                         <div class="swiper-container">
-                            <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide">Slide 1</div>
-                                <div class="swiper-slide">Slide 2</div>
-                                <div class="swiper-slide">Slide 3</div>
-                                <div class="swiper-slide">Slide 4</div>
-                                <div class="swiper-slide">Slide 5</div>
-                                <div class="swiper-slide">Slide 6</div>
-                                <div class="swiper-slide">Slide 7</div>
-                                <div class="swiper-slide">Slide 8</div>
-                                <div class="swiper-slide">Slide 9</div>
-                                <div class="swiper-slide">Slide 10</div>
+                                <div class="swiper-slide">
+                                    <div
+                                        class="inner-slide"
+                                        style="
+                                            background-image: url('assets/images/eggs.jpg');
+                                        "
+                                    ></div>
+                                    <div class="slide-select"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div
+                                        class="inner-slide"
+                                        style="
+                                            background-image: url('assets/images/nuts.jpg');
+                                        "
+                                    ></div>
+                                    <div class="slide-select"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div
+                                        class="inner-slide"
+                                        style="
+                                            background-image: url('assets/images/coconuts.jpg');
+                                        "
+                                    ></div>
+                                    <div class="slide-select"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div
+                                        class="inner-slide"
+                                        style="
+                                            background-image: url('assets/images/cheese.jpg');
+                                        "
+                                    ></div>
+                                    <div class="slide-select"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div
+                                        class="inner-slide"
+                                        style="
+                                            background-image: url('assets/images/cottage-cheese.jpg');
+                                        "
+                                    ></div>
+                                    <div class="slide-select"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div
+                                        class="inner-slide"
+                                        style="
+                                            background-image: url('assets/images/butter.jpg');
+                                        "
+                                    ></div>
+                                    <div class="slide-select"></div>
+                                </div>
                             </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
-                    <button type="submit" class="btn">Continue</button>
+                    <button type="submit" class="btn submit">Continue</button>
                 </section>
             </form>
         </main>
 
         <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-        <script src="assets/js/vendor/swiper.min.js"></script>
+        <script src="assets/js/vendor/swiper-bundle.min.js"></script>
         <script src="assets/js/script.js"></script>
     </body>
 </html>
